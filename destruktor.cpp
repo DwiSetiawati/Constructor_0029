@@ -13,3 +13,18 @@ public:
     void cetakData();
     void isiData();
 };
+// Definisi member function
+angka::angka(int i)
+{ // Constructor
+    panjang = i;
+    arr = new int[i];
+    isiData();
+}
+
+angka::~angka()
+{ // Destructor
+    cout << endl;
+    cetakData();
+    delete[] arr;
+    cout << "Alamat Arrray Sudah Dilepaskan" << endl;
+}
