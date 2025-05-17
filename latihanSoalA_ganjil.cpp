@@ -94,3 +94,24 @@ public:
         cout << "Gaji Staff (akses dari Universitas): " << lihatGajiStaff(s) << endl;
     }
 };
+
+int main()
+{
+    Mahasiswa m("Yono", "873901");
+    Dosen d("Nusworo", "NIDN7489", "Lektor kepala", 60000000);
+    Staff s("Marwah", "STF685", 4000000);
+    Universitas u;
+
+    m.tampilkanInfo();
+    d.berikanNilai(m, 75.5);
+    m.tampilkanInfo();
+
+    d.tampilkanInfo();
+    s.ubahPangkat(&d, "Guru Besar");
+    d.tampilkanInfo();
+
+    u.lihatGajiDosenMelaluiFriend(d);
+    u.lihatGajiStaffMelaluiFriend(s);
+
+    return 0;
+}
