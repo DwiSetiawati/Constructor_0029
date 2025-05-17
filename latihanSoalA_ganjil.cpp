@@ -80,3 +80,17 @@ double lihatGajiStaff(const Staff &s)
 {
     return s.gaji;
 }
+
+class Universitas
+{
+public:
+    void lihatGajiDosenMelaluiFriend(const Dosen &d)
+    {
+        cout << "Gaji Dosen (akses dari Universitas): " << lihatGajiDosen(d) << endl;
+    }
+
+    void lihatGajiStaffMelaluiFriend(const Staff &s)
+    {
+        cout << "Gaji Staff (akses dari Universitas): " << lihatGajiStaff(s) << endl;
+    }
+};
