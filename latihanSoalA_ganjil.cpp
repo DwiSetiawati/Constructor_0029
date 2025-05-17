@@ -52,3 +52,31 @@ double lihatGajiDosen(const Dosen &d)
 {
     return d.gaji;
 }
+
+class Staff
+{
+private:
+    string nama;
+    string ID_staff;
+    double gaji;
+
+public:
+    Staff(string n, string id, double g)
+        : nama(n), ID_staff(id), gaji(g) {}
+
+    void ubahPangkat(Dosen *d, const string &pangkatBaru)
+    {
+        d->pangkat = pangkatBaru;
+    }
+
+    void tampilkanInfo()
+    {
+        cout << "Staff: " << nama << ", ID: " << ID_staff << ", Gaji: " << gaji << endl;
+    }
+    friend double lihatGajiStaff(const Staff &s);
+};
+
+double lihatGajiStaff(const Staff &s)
+{
+    return s.gaji;
+}
