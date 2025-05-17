@@ -22,3 +22,33 @@ public:
     }
     friend class Dosen;
 };
+
+class Dosen
+{
+private:
+    string nama;
+    string NIP;
+    string pangkat;
+    double gaji;
+
+public:
+    Dosen(string n, string nip, string p, double g) : nama(n), NIP(nip), pangkat(p), gaji(g) {}
+
+    void berikanNilai(Mahasiswa &m, float n)
+    {
+        m.nilai = n;
+    }
+
+    void tampilkanInfo()
+    {
+        cout << "Dosen: " << nama << ", NIP: " << NIP << ", Pangkat: " << pangkat << ", Gaji: " << gaji << endl;
+    }
+    friend class Staff;
+
+    friend double lihatGajiDosen(const Dosen &d);
+};
+
+double lihatGajiDosen(const Dosen &d)
+{
+    return d.gaji;
+}
